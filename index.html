@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burmese Dress Prompt Generator</title>
+    <!-- This script includes the Tailwind CSS framework for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <script>
+        // Custom configuration for Tailwind CSS to add the Inter font family
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        'burmese-red': '#8c1c13',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800">
+
+    <!-- Main application container -->
+    <main class="max-w-5xl mx-auto my-8 p-6 md:p-8 bg-white rounded-xl shadow-lg">
+
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-burmese-red">Burmese Dress Prompt Generator 🇲🇲</h1>
+            <p class="text-slate-500 mt-2">Craft the perfect, detailed prompt for your creative projects.</p>
+        </header>
+
+        <!-- Grid for main selection categories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Subject -->
+            <div>
+                <label for="subject" class="block mb-2 font-semibold text-slate-700">Subject</label>
+                <select id="subject" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>young Southeast Asian woman</option>
+                    <option>elegant Burmese lady</option>
+                    <option>beautiful Myanmar woman</option>
+                    <option>graceful Asian woman</option>
+                    <option>traditional Burmese model</option>
+                </select>
+            </div>
+            <!-- Color -->
+            <div>
+                <label for="color" class="block mb-2 font-semibold text-slate-700">Color</label>
+                <select id="color" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>mustard yellow</option>
+                    <option>golden yellow</option>
+                    <option>deep emerald green</option>
+                    <option>royal blue</option>
+                    <option>burgundy red</option>
+                    <option>soft pink</option>
+                    <option>cream white</option>
+                    <option>traditional silk purple</option>
+                    <option>Pastel multi-colored floral print(rose,daisies)</option>
+                </select>
+            </div>
+            <!-- Style Details -->
+            <div>
+                <label for="style" class="block mb-2 font-semibold text-slate-700">Style Details</label>
+                <select id="style" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>featuring a fitted crop top with lace-up front detail and long fitted skirt</option>
+                    <option>with intricate embroidered patterns and form-fitting silhouette</option>
+                    <option>decorated with traditional Myanmar motifs and gold threading</option>
+                    <option>made of smooth silk fabric with elegant draping</option>
+                    <option>with beaded details and traditional collar design</option>
+                    <option>featuring wrap-style top and floor-length sarong skirt</option>
+                    <option>Traditional Burmese htamein cut, but fitted for silhouette-hugging modern shape</option>
+                </select>
+            </div>
+            <!-- Pose -->
+            <div>
+                <label for="pose" class="block mb-2 font-semibold text-slate-700">Pose</label>
+                <select id="pose" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>posed gracefully with one hand on hip in three-quarter turn</option>
+                    <option>standing elegantly with hands clasped in front</option>
+                    <option>sitting gracefully with traditional posture</option>
+                    <option>walking with flowing fabric movement</option>
+                    <option>posed in traditional Myanmar greeting gesture</option>
+                    <option>dancing in traditional Burmese style</option>
+                    <option>walking through the lotus pond, holding pink and white flowers in her hands</option>
+                    
+                </select>
+            </div>
+            <!-- Setting -->
+            <div>
+                <label for="setting" class="block mb-2 font-semibold text-slate-700">Setting</label>
+                <select id="setting" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>indoors with large windows and natural daylight, white walls</option>
+                    <option>in front of traditional Myanmar pagoda</option>
+                    <option>in a modern studio with neutral background</option>
+                    <option>outdoors in tropical garden setting</option>
+                    <option>inside traditional Burmese house with wooden architecture</option>
+                    <option>at cultural festival with festive atmosphere</option>
+                    <option>standing in a lotus pond</option>
+                </select>
+            </div>
+            <!-- Lighting -->
+            <div>
+                <label for="lighting" class="block mb-2 font-semibold text-slate-700">Lighting</label>
+                <select id="lighting" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>soft natural lighting</option>
+                    <option>golden hour lighting</option>
+                    <option>professional studio lighting</option>
+                    <option>warm ambient lighting</option>
+                    <option>dramatic side lighting</option>
+                    <option>bright daylight</option>
+                </select>
+            </div>
+            <!-- Quality Modifier -->
+            <div>
+                <label for="quality" class="block mb-2 font-semibold text-slate-700">Quality Modifier</label>
+                <select id="quality" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-burmese-red focus:border-burmese-red transition duration-200">
+                    <option>elegant portrait photography</option>
+                    <option>high-resolution professional photo</option>
+                    <option>cultural fashion photography</option>
+                    <option>traditional costume portrait</option>
+                    <option>artistic fashion shoot</option>
+                    <option>documentary style photography</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section for additional styling options -->
+        <div class="mb-8 p-6 bg-slate-50 rounded-lg border border-slate-200">
+            <h3 class="text-lg font-semibold text-slate-700 mb-4">Additional Styling Options</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 checkbox-group">
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="with long dark hair styled in traditional bun with flowers"> <span>Hair & Makeup</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="subtle makeup with pink lips and defined eyes"> <span>Subtle Makeup</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="wearing traditional Myanmar jewelry and accessories"> <span>Jewelry & Accessories</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="made of traditional Myanmar silk"> <span>Silk Fabric</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="with hand-woven patterns"> <span>Hand-woven Patterns</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="featuring metallic thread embroidery"> <span>Metallic Embroidery</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="authentic Myanmar traditional dress"> <span>Authentic Dress</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="worn for Thingyan festival celebration"> <span>Thingyan Festival</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="representing Myanmar cultural heritage"> <span>Cultural Heritage</span></label>
+                <label class="flex items-center space-x-3 font-medium text-slate-600 cursor-pointer hover:text-burmese-red transition-colors"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-burmese-red focus:ring-burmese-red" value="Lightweight chiffon"> <span>Fabric Type</span></label>
+            </div>
+        </div>
+        
+        <!-- Generate Prompt Button -->
+        <div class="text-center my-6">
+            <button id="generateButton" class="w-full md:w-auto bg-burmese-red hover:bg-red-800 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-300">
+                Generate Prompt
+            </button>
+        </div>
+
+        <!-- Result container for the generated prompt -->
+        <div id="result-container" class="bg-slate-200 p-6 rounded-lg">
+            <h2 class="text-xl font-bold text-center text-slate-700 mb-4">Your Generated Prompt</h2>
+            <textarea id="generatedPrompt" readonly class="w-full min-h-[140px] p-4 bg-white font-mono text-sm border border-slate-300 rounded-md shadow-inner focus:outline-none"></textarea>
+            <div class="text-center mt-4">
+                <button id="copyButton" class="w-full md:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-sm transition-colors focus:outline-none focus:ring-4 focus:ring-green-300">
+                    Copy to Clipboard
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const generateButton = document.getElementById('generateButton');
+            const copyButton = document.getElementById('copyButton');
+            const generatedPrompt = document.getElementById('generatedPrompt');
+
+            // Function to generate the prompt based on user selections
+            const generatePrompt = () => {
+                const subject = document.getElementById('subject').value;
+                const color = document.getElementById('color').value;
+                const style = document.getElementById('style').value;
+                const pose = document.getElementById('pose').value;
+                const setting = document.getElementById('setting').value;
+                const lighting = document.getElementById('lighting').value;
+                
+                // The quality modifier is now a standalone part of the prompt
+                const quality = document.getElementById('quality').value;
+
+                let promptParts = [
+                    `${subject} wearing a traditional Burmese htamein in ${color}`,
+                    style,
+                    pose,
+                    setting,
+                    lighting,
+                ];
+
+                // Add optional details from checkboxes
+                const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]:checked');
+                checkboxes.forEach(checkbox => {
+                    promptParts.push(checkbox.value);
+                });
+                
+                // Add the quality modifier at the end for better prompt structure
+                promptParts.push(quality);
+
+                generatedPrompt.value = promptParts.join(', ');
+            };
+            
+            // Function to copy the generated prompt to the clipboard
+            const copyPrompt = () => {
+                if (generatedPrompt.value) {
+                    generatedPrompt.select();
+                    generatedPrompt.setSelectionRange(0, 99999); // For mobile devices
+
+                    try {
+                        const successful = document.execCommand('copy');
+                        if (successful) {
+                            copyButton.textContent = 'Copied!';
+                            copyButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+                            copyButton.classList.add('bg-blue-600');
+                            setTimeout(() => {
+                                copyButton.textContent = 'Copy to Clipboard';
+                                copyButton.classList.remove('bg-blue-600');
+                                copyButton.classList.add('bg-green-600', 'hover:bg-green-700');
+                            }, 2000);
+                        } else {
+                            // This part may not be reachable if execCommand throws an error, but it's a good fallback.
+                            alert('Failed to copy prompt. Please copy it manually.');
+                        }
+                    } catch (err) {
+                        console.error('Copy to clipboard failed: ', err);
+                        alert('Failed to copy prompt. Please copy it manually.');
+                    }
+
+                    // Deselect the text after copying
+                    window.getSelection().removeAllRanges();
+                }
+            };
+            
+            // Event listeners for the buttons and any input change
+            generateButton.addEventListener('click', generatePrompt);
+            copyButton.addEventListener('click', copyPrompt);
+            
+            // Re-generate the prompt automatically when any option is changed
+            document.querySelectorAll('select, input[type="checkbox"]').forEach(element => {
+                element.addEventListener('change', generatePrompt);
+            });
+
+            // Generate a prompt on initial page load
+            generatePrompt();
+        });
+    </script>
+
+</body>
+</html>
